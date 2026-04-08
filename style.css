@@ -35,6 +35,12 @@ nav a:hover {
   transform: scale(1.15);
 }
 
+/* ✅ ACTIVE NAV LINK */
+nav a.active {
+  color: white;
+  border-bottom: 2px solid #38bdf8;
+}
+
 /* HERO */
 .hero {
   text-align: center;
@@ -62,6 +68,22 @@ h1 {
   color: #38bdf8;
 }
 
+/* ✅ HERO FADE-IN */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 /* FLOATING TEXT */
 .floating-text {
   color: #38bdf8;
@@ -81,6 +103,24 @@ section {
   margin: auto;
   padding: 40px 20px;
   border-bottom: 1px solid #334155;
+  position: relative;
+}
+
+/* ✅ SECTION HOVER LINE */
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.5s;
+}
+
+section:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 /* PROJECT CARDS */
@@ -148,8 +188,8 @@ ul li:hover {
 .tech-item:hover {
   background: #38bdf8;
   color: black;
-  transform: scale(1.08);
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
 }
 
 /* EDUCATION */
@@ -179,12 +219,33 @@ ul li:hover {
   color: black;
   text-decoration: none;
   transition: 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
 .button:hover {
   background: white;
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* ✅ RIPPLE EFFECT */
+.button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.button:hover::after {
+  width: 200%;
+  height: 200%;
 }
 
 /* SCROLL ANIMATION */

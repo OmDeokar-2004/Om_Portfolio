@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Ashok Deokar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#internships">Internships</a>
+    <a href="#research">Research</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="profile.jpg" class="profile-img">
+    <h1>Om Ashok Deokar</h1>
+    <p><strong>Aspiring AI/ML Engineer | Data Science Enthusiast</strong></p>
+    <p class="floating-text">AI • ML • Data • Innovation</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="hidden">
+    <h2>👨‍💻 About Me</h2>
+    <p>
+      Computer Engineering graduate passionate about AI/ML, Data Science, and solving real-world problems through intelligent systems.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="hidden">
+    <h2>🎓 Education</h2>
+
+    <div class="project">
+      <h3>Intermediate (XII)</h3>
+      <p>Namorims Junior College, Pune (2020–2022)</p>
+    </div>
+
+    <div class="project">
+      <h3>B.Tech in Computer Engineering</h3>
+
+      <div class="edu-flex">
+        <img src="mit-logo.png" class="edu-logo">
+        <p>MIT Academy of Engineering, Alandi (2022–2026)</p>
+      </div>
+    </div>
+
+    <div class="edu-animation">🎓 Learning • Growing • Building</div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="hidden">
+    <h2>🛠 Skills</h2>
+
+    <ul>
+      <li>Artificial Intelligence</li>
+      <li>Machine Learning</li>
+      <li>Data Science</li>
+      <li>Critical Thinking</li>
+      <li>Analytical Thinking</li>
+      <li>Communication</li>
+    </ul>
+
+    <h3>Tech Stack</h3>
+
+    <div class="tech-stack">
+
+      <div class="tech-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+        <span>Python</span>
+      </div>
+
+      <div class="tech-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg">
+        <span>Tableau</span>
+      </div>
+
+      <div class="tech-item">
+        <img src="https://img.icons8.com/color/48/power-bi.png">
+        <span>Power BI</span>
+      </div>
+
+      <div class="tech-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg">
+        <span>Machine Learning</span>
+      </div>
+
+      <div class="tech-item">
+        <img src="https://img.icons8.com/color/48/artificial-intelligence.png">
+        <span>GenAI</span>
+      </div>
+
+      <div class="tech-item">
+        <img src="https://img.icons8.com/color/48/chatgpt.png">
+        <span>LLMs / Chatbots</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="hidden">
+    <h2>🚀 Projects</h2>
+
+    <div class="project">
+      <h3>Multiple Face Recognition Using Genetic Algorithm</h3>
+      <p>Developed a face recognition system with improved accuracy and performance using optimization techniques.</p>
+    </div>
+
+    <div class="project">
+      <h3>Marathi Barakhadi Website</h3>
+      <p>Built an interactive educational platform for children to learn Marathi efficiently.</p>
+    </div>
+  </section>
+
+  <!-- INTERNSHIPS -->
+  <section id="internships" class="hidden">
+    <h2>💼 Internships</h2>
+
+    <div class="project">
+      <h3>AI/ML Intern – MyJobGrow</h3>
+      <p>Worked on ML concepts and developed an attendance system.</p>
+    </div>
+
+    <div class="project">
+      <h3>Data Analytics Intern – Zaalima Development</h3>
+      <p>Performed customer churn analysis and data insights.</p>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="hidden">
+    <h2>📄 Research</h2>
+
+    <div class="project">
+      <h3>Comparative Analysis of ML Techniques</h3>
+      <p>Published in IJRASET (March 2026)</p>
+      <p><strong>DOI:</strong> https://doi.org/10.22214/ijraset.2026.78256</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="hidden">
+    <h2>📞 Contact</h2>
+
+    <p>📧 Email: omdeokar04@gmail.com</p>
+    <p>📱 Phone: 7020590021</p>
+    <p>🔗 LinkedIn: www.linkedin.com/in/omdeokar</p>
+
+    <br>
+
+    <a href="resume.pdf" target="_blank" class="button">View Resume</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Om Ashok Deokar</p>
+    <p>Built with passion 🚀</p>
+  </footer>
+
+  <!-- ANIMATION -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>

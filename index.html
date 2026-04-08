@@ -22,8 +22,8 @@
   <!-- HERO -->
   <header class="hero">
     <img src="profile.jpg" class="profile-img">
-    <h1>Om Ashok Deokar</h1>
-    <p><strong>Aspiring AI/ML Engineer | Data Science Enthusiast</strong></p>
+    <h1 class="fade-in">Om Ashok Deokar</h1>
+    <p class="fade-in delay"><strong>Aspiring AI/ML Engineer | Data Science Enthusiast</strong></p>
     <p class="floating-text">AI • ML • Data • Innovation</p>
   </header>
 
@@ -31,7 +31,10 @@
   <section id="about" class="hidden">
     <h2>👨‍💻 About Me</h2>
     <p>
-      Computer Engineering graduate with a strong passion for Artificial Intelligence,Machine Learning and Data Science.I enjoy applying analytical thinking and technical skills to solve real-world problems through intelligent systems.With hands-on experience from academic projects and internships,I have developed a foundation in building data-driven solutions.I am a curious and motivated learner,eager to continuously grow and contribute to innovative technologies.
+      Computer Engineering graduate with a strong passion for Artificial Intelligence, Machine Learning and Data Science.
+      I enjoy applying analytical thinking and technical skills to solve real-world problems through intelligent systems.
+      With hands-on experience from academic projects and internships, I have developed a foundation in building data-driven solutions.
+      I am a curious and motivated learner, eager to continuously grow and contribute to innovative technologies.
     </p>
   </section>
 
@@ -78,13 +81,11 @@
         <span>Python</span>
       </div>
 
-      <!-- ✅ FIXED TABLEAU -->
       <div class="tech-item">
         <img src="tableu.png">
         <span>Tableau</span>
       </div>
 
-      <!-- ✅ FIXED POWER BI -->
       <div class="tech-item">
         <img src="powerbi.png">
         <span>Power BI</span>
@@ -159,7 +160,7 @@
 
     <br>
 
-    <a href="Resume.pdf" target="_blank" class="button">View Resume</a>
+    <a href="resume.pdf" target="_blank" class="button">View Resume</a>
   </section>
 
   <!-- FOOTER -->
@@ -168,7 +169,7 @@
     <p>Built with passion 🚀</p>
   </footer>
 
-  <!-- ANIMATION -->
+  <!-- SCROLL ANIMATION -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -179,6 +180,30 @@
     });
 
     document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
+  </script>
+
+  <!-- NAVBAR ACTIVE -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((a) => {
+        a.classList.remove("active");
+        if (a.getAttribute("href") === "#" + current) {
+          a.classList.add("active");
+        }
+      });
+    });
   </script>
 
 </body>

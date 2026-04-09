@@ -16,6 +16,7 @@
     <a href="#projects">Projects</a>
     <a href="#internships">Internships</a>
     <a href="#research">Research</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -42,7 +43,6 @@
   <section id="education" class="hidden">
     <h2>🎓 Education</h2>
 
-    <!-- ✅ NEW ADDED -->
     <div class="project">
       <h3>Secondary School (X)</h3>
       <p>Rewachand Bhojwani Academy (2010–2020)</p>
@@ -156,6 +156,32 @@
     </div>
   </section>
 
+  <!-- ✅ NEW CERTIFICATIONS SECTION -->
+  <section id="certifications" class="hidden">
+    <h2>📜 Certifications</h2>
+
+    <div class="project">
+      <h3>NPTEL - Cloud Computing</h3>
+      <a href="NPTEL.png" target="_blank" class="button">View</a>
+    </div>
+
+    <div class="project">
+      <h3>Infosys - Building Interactive Dashboards with Microsoft Power BI</h3>
+      <a href="Infosys.png" target="_blank" class="button">View</a>
+    </div>
+
+    <div class="project">
+      <h3>Eduskills - Virtual Internship</h3>
+      <a href="Eduskills.png" target="_blank" class="button">View</a>
+    </div>
+
+    <div class="project">
+      <h3>SkillMetrics - Blockchain Technology</h3>
+      <a href="Skills.png" target="_blank" class="button">View</a>
+    </div>
+
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="hidden">
     <h2>📞 Contact</h2>
@@ -175,7 +201,7 @@
     <p>Built with passion 🚀</p>
   </footer>
 
-  <!-- SCROLL ANIMATION -->
+  <!-- SCRIPTS SAME -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -184,11 +210,9 @@
         }
       });
     });
-
     document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
   </script>
 
-  <!-- NAVBAR ACTIVE -->
   <script>
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");

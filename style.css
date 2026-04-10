@@ -7,8 +7,8 @@ html {
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #fdfcf9, #f1f5f9); /* warm off-white */
-  color: #0f172a;  /* stronger black */
+  background: linear-gradient(to bottom, #ffffff, #f8fafc); /* cleaner white */
+  color: #0f172a;
 }
 
 /* NAVBAR */
@@ -21,38 +21,41 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
 nav a {
-  color: #38bdf8;
+  color: #0ea5e9;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
 nav a:hover {
-  color: #0ea5e9;
-  transform: scale(1.1);
+  color: #0284c7;
+  transform: scale(1.08);
 }
 
-/* ACTIVE NAV */
 nav a.active {
-  color: #0ea5e9;
-  border-bottom: 2px solid #38bdf8;
+  border-bottom: 2px solid #0ea5e9;
 }
 
-/* HERO */
+/* HERO (MAJOR UPGRADE) */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
+  background: white;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 }
 
 /* PROFILE IMAGE */
 .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 190px;
+  height: 190px;
   border-radius: 14px;
   border: 3px solid #38bdf8;
   object-fit: cover;
@@ -61,13 +64,25 @@ nav a.active {
 
 .profile-img:hover {
   transform: scale(1.08);
-  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
 }
 
 /* HEADINGS */
 h1 {
-  font-size: 42px;
-  color: #0ea5e9;
+  font-size: 46px;
+  font-weight: 700;
+  color: #0284c7;
+  margin-top: 10px;
+}
+
+/* HERO LINE */
+.hero-line {
+  width: 80px;
+  height: 3px;
+  background: #38bdf8;
+  border: none;
+  margin: 15px auto;
+  border-radius: 10px;
 }
 
 /* HERO FADE-IN */
@@ -96,32 +111,26 @@ h1 {
   50% { transform: translateY(-6px); }
 }
 
-/* SECTIONS (NOW CARD STYLE) */
+/* SECTIONS */
 section {
   max-width: 900px;
   margin: 25px auto;
   padding: 40px 25px;
   background: white;
   border-radius: 14px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-  position: relative;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
-/* SECTION HOVER LINE */
-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: #38bdf8;
-  transition: 0.5s;
+section:hover {
+  transform: translateY(-4px);
 }
 
-section:hover::after {
-  width: 100%;
-  left: 0;
+/* TEXT IMPROVEMENT */
+section p {
+  line-height: 1.7;
+  font-size: 16px;
+  color: #334155;
 }
 
 /* PROJECT CARDS */
@@ -130,12 +139,12 @@ section:hover::after {
   padding: 20px;
   margin: 20px 0;
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
 }
 
 .project h3 {
-  color: #0ea5e9;
+  color: #0284c7;
 }
 
 .project:hover {
@@ -150,7 +159,7 @@ ul {
 }
 
 ul li {
-  background: #eef2f7;
+  background: #f1f5f9;
   margin: 8px;
   padding: 10px 15px;
   border-radius: 8px;
@@ -176,7 +185,7 @@ ul li:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #eef2f7;
+  background: #f1f5f9;
   padding: 8px 12px;
   border-radius: 8px;
   transition: 0.3s;
@@ -191,7 +200,7 @@ ul li:hover {
   background: #38bdf8;
   color: white;
   transform: translateY(-4px);
-  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.35);
 }
 
 /* EDUCATION */
@@ -202,11 +211,11 @@ ul li:hover {
 }
 
 .edu-logo {
-  width: 100px;
+  width: 95px;
   background: white;
   padding: 6px;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e5e7eb;
   transition: 0.3s;
 }
 
@@ -216,39 +225,18 @@ ul li:hover {
 
 /* BUTTON */
 .button {
-  background: #38bdf8;
+  background: #0ea5e9;
   padding: 10px 20px;
   border-radius: 8px;
   color: white;
   text-decoration: none;
   transition: 0.3s;
-  position: relative;
-  overflow: hidden;
 }
 
 .button:hover {
-  background: #0ea5e9;
+  background: #0284c7;
   transform: scale(1.08);
   box-shadow: 0 5px 15px rgba(56,189,248,0.4);
-}
-
-/* RIPPLE EFFECT */
-.button::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  background: rgba(255,255,255,0.3);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s;
-}
-
-.button:hover::after {
-  width: 200%;
-  height: 200%;
 }
 
 /* SCROLL ANIMATION */
@@ -267,6 +255,6 @@ ul li:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: #f8fafc;
+  background: #f9fafb;
   color: #334155;
 }

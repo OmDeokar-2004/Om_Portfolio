@@ -23,8 +23,16 @@
   <!-- HERO -->
   <header class="hero">
     <img src="profile.jpg" class="profile-img">
+
     <h1 class="fade-in">Om Ashok Deokar</h1>
-    <p class="fade-in delay"><strong>Aspiring AI/ML Engineer | Data Science Enthusiast</strong></p>
+
+    <p class="fade-in delay">
+      <strong>Aspiring AI/ML Engineer | Data Science Enthusiast</strong>
+    </p>
+
+    <!-- 🔥 HERO DIVIDER LINE ADDED -->
+    <hr class="hero-line">
+
     <p class="floating-text">AI • ML • Data • Innovation</p>
   </header>
 
@@ -156,7 +164,7 @@
     </div>
   </section>
 
-  <!-- ✅ NEW CERTIFICATIONS SECTION -->
+  <!-- CERTIFICATIONS -->
   <section id="certifications" class="hidden">
     <h2>📜 Certifications</h2>
 
@@ -201,7 +209,7 @@
     <p>Built with passion 🚀</p>
   </footer>
 
-  <!-- SCRIPTS SAME -->
+  <!-- SCROLL ANIMATION -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -213,6 +221,7 @@
     document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
   </script>
 
+  <!-- ACTIVE NAV -->
   <script>
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");

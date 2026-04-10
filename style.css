@@ -7,8 +7,8 @@ html {
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f8fafc;   /* off-white */
-  color: #1e293b;        /* dark text */
+  background: linear-gradient(to bottom, #fdfcf9, #f1f5f9); /* warm off-white */
+  color: #0f172a;  /* stronger black */
 }
 
 /* NAVBAR */
@@ -22,6 +22,7 @@ nav {
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 nav a {
@@ -52,7 +53,7 @@ nav a.active {
 .profile-img {
   width: 180px;
   height: 180px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 3px solid #38bdf8;
   object-fit: cover;
   transition: 0.4s;
@@ -60,7 +61,7 @@ nav a.active {
 
 .profile-img:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
 }
 
 /* HEADINGS */
@@ -80,9 +81,7 @@ h1 {
 }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 /* FLOAT TEXT */
@@ -97,16 +96,18 @@ h1 {
   50% { transform: translateY(-6px); }
 }
 
-/* SECTIONS */
+/* SECTIONS (NOW CARD STYLE) */
 section {
   max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  border-bottom: 1px solid #e2e8f0;
+  margin: 25px auto;
+  padding: 40px 25px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
   position: relative;
 }
 
-/* SECTION LINE ANIMATION */
+/* SECTION HOVER LINE */
 section::after {
   content: "";
   position: absolute;
@@ -125,12 +126,12 @@ section:hover::after {
 
 /* PROJECT CARDS */
 .project {
-  background: white;
+  background: #ffffff;
   padding: 20px;
   margin: 20px 0;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 
 .project h3 {
@@ -138,8 +139,8 @@ section:hover::after {
 }
 
 .project:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 /* SKILLS */
@@ -149,7 +150,7 @@ ul {
 }
 
 ul li {
-  background: #e2e8f0;
+  background: #eef2f7;
   margin: 8px;
   padding: 10px 15px;
   border-radius: 8px;
@@ -175,7 +176,7 @@ ul li:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #e2e8f0;
+  background: #eef2f7;
   padding: 8px 12px;
   border-radius: 8px;
   transition: 0.3s;
@@ -189,7 +190,7 @@ ul li:hover {
 .tech-item:hover {
   background: #38bdf8;
   color: white;
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-4px);
   box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
 }
 
@@ -201,9 +202,9 @@ ul li:hover {
 }
 
 .edu-logo {
-  width: 110px;
+  width: 100px;
   background: white;
-  padding: 5px;
+  padding: 6px;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   transition: 0.3s;
@@ -266,6 +267,6 @@ ul li:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: #f1f5f9;
-  color: #1e293b;
+  background: #f8fafc;
+  color: #334155;
 }

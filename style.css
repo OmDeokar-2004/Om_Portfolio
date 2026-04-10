@@ -7,8 +7,8 @@ html {
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #1e293b, #0f172a);
-  color: #e2e8f0;
+  background: #f8fafc;   /* off-white */
+  color: #1e293b;        /* dark text */
 }
 
 /* NAVBAR */
@@ -16,11 +16,12 @@ nav {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background: #0f172a;
+  background: white;
   padding: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 nav a {
@@ -31,13 +32,13 @@ nav a {
 }
 
 nav a:hover {
-  color: white;
-  transform: scale(1.15);
+  color: #0ea5e9;
+  transform: scale(1.1);
 }
 
-/* ✅ ACTIVE NAV LINK */
+/* ACTIVE NAV */
 nav a.active {
-  color: white;
+  color: #0ea5e9;
   border-bottom: 2px solid #38bdf8;
 }
 
@@ -59,16 +60,16 @@ nav a.active {
 
 .profile-img:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
 
 /* HEADINGS */
 h1 {
   font-size: 42px;
-  color: #38bdf8;
+  color: #0ea5e9;
 }
 
-/* ✅ HERO FADE-IN */
+/* HERO FADE-IN */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease forwards;
@@ -84,14 +85,13 @@ h1 {
   }
 }
 
-/* FLOATING TEXT */
+/* FLOAT TEXT */
 .floating-text {
   color: #38bdf8;
   margin-top: 10px;
   animation: floatText 3s ease-in-out infinite;
 }
 
-/* FLOAT ANIMATION */
 @keyframes floatText {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
@@ -102,11 +102,11 @@ section {
   max-width: 900px;
   margin: auto;
   padding: 40px 20px;
-  border-bottom: 1px solid #334155;
+  border-bottom: 1px solid #e2e8f0;
   position: relative;
 }
 
-/* ✅ SECTION HOVER LINE */
+/* SECTION LINE ANIMATION */
 section::after {
   content: "";
   position: absolute;
@@ -125,20 +125,21 @@ section:hover::after {
 
 /* PROJECT CARDS */
 .project {
-  background: #1e293b;
+  background: white;
   padding: 20px;
   margin: 20px 0;
   border-radius: 12px;
+  border: 1px solid #e2e8f0;
   transition: all 0.4s ease;
 }
 
 .project h3 {
-  color: #38bdf8;
+  color: #0ea5e9;
 }
 
 .project:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* SKILLS */
@@ -148,7 +149,7 @@ ul {
 }
 
 ul li {
-  background: #334155;
+  background: #e2e8f0;
   margin: 8px;
   padding: 10px 15px;
   border-radius: 8px;
@@ -158,7 +159,7 @@ ul li {
 
 ul li:hover {
   background: #38bdf8;
-  color: black;
+  color: white;
   transform: scale(1.08);
 }
 
@@ -174,7 +175,7 @@ ul li:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #334155;
+  background: #e2e8f0;
   padding: 8px 12px;
   border-radius: 8px;
   transition: 0.3s;
@@ -187,9 +188,9 @@ ul li:hover {
 
 .tech-item:hover {
   background: #38bdf8;
-  color: black;
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+  color: white;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
 }
 
 /* EDUCATION */
@@ -204,6 +205,7 @@ ul li:hover {
   background: white;
   padding: 5px;
   border-radius: 8px;
+  border: 1px solid #e2e8f0;
   transition: 0.3s;
 }
 
@@ -216,7 +218,7 @@ ul li:hover {
   background: #38bdf8;
   padding: 10px 20px;
   border-radius: 8px;
-  color: black;
+  color: white;
   text-decoration: none;
   transition: 0.3s;
   position: relative;
@@ -224,18 +226,18 @@ ul li:hover {
 }
 
 .button:hover {
-  background: white;
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  background: #0ea5e9;
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(56,189,248,0.4);
 }
 
-/* ✅ RIPPLE EFFECT */
+/* RIPPLE EFFECT */
 .button::after {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.3);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -264,5 +266,6 @@ ul li:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: #0f172a;
+  background: #f1f5f9;
+  color: #1e293b;
 }

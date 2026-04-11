@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  background: linear-gradient(to bottom, #f8fbff, #eef6ff); /* 🔵 light blue */
   color: #020617;
 }
 
@@ -246,7 +246,7 @@ ul li:hover {
   box-shadow: 0 5px 15px rgba(56,189,248,0.4);
 }
 
-/* 🔥 CONTACT SECTION IMPROVEMENT */
+/* CONTACT */
 #contact p {
   font-size: 17px;
   margin: 10px 0;
@@ -261,6 +261,6 @@ ul li:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: #f9fafb;
+  background: #f0f7ff; /* 🔵 subtle blue */
   color: #334155;
 }

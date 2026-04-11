@@ -1,220 +1,266 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om Ashok Deokar | Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=5">
-</head>
-<body>
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#internships">Internships</a>
-    <a href="#research">Research</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
-  </nav>
+/* BODY */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  color: #020617;
+}
 
-  <!-- HERO -->
-  <header class="hero">
-    <img src="profile.jpg" class="profile-img">
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: white;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
 
-    <h1 class="fade-in">Om Ashok Deokar</h1>
+nav a {
+  color: #0ea5e9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
-    <!-- 🔥 TYPING TEXT -->
-    <p id="typing"></p>
+nav a:hover {
+  color: #0284c7;
+  transform: scale(1.08);
+}
 
-    <hr class="hero-line">
+nav a.active {
+  border-bottom: 2px solid #0ea5e9;
+}
 
-    <p class="floating-text">AI • ML • Data • Innovation</p>
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
 
-    <!-- 🔥 HERO BUTTONS -->
-    <div class="hero-buttons">
-      <a href="https://github.com/OmDeokar-2004" target="_blank" class="button">GitHub</a>
-      <a href="https://www.linkedin.com/in/omdeokar" target="_blank" class="button">LinkedIn</a>
-    </div>
-  </header>
+/* PROFILE IMAGE */
+.profile-img {
+  width: 190px;
+  height: 190px;
+  border-radius: 14px;
+  border: 3px solid #38bdf8;
+  object-fit: cover;
+  transition: 0.4s;
+}
 
-  <!-- ABOUT -->
-  <section id="about" class="hidden">
-    <h2>👨‍💻 About Me</h2>
-    <p>
-      Computer Engineering graduate with a strong passion for Artificial Intelligence, Machine Learning and Data Science.
-      I enjoy applying analytical thinking and technical skills to solve real-world problems through intelligent systems.
-      With hands-on experience from academic projects and internships, I have developed a foundation in building data-driven solutions.
-      I am a curious and motivated learner, eager to continuously grow and contribute to innovative technologies.
-    </p>
-  </section>
+.profile-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+}
 
-  <!-- EDUCATION -->
-  <section id="education" class="hidden">
-    <h2>🎓 Education</h2>
+/* HEADINGS */
+h1 {
+  font-size: 46px;
+  font-weight: 700;
+  color: #0284c7;
+  margin-top: 10px;
+}
 
-    <div class="project">
-      <h3>Secondary School (X)</h3>
-      <p>Rewachand Bhojwani Academy (2010–2020)</p>
-    </div>
+h2 {
+  font-size: 26px;
+  color: #020617;
+}
 
-    <div class="project">
-      <h3>Intermediate (XII)</h3>
-      <p>Namorims Junior College, Pune (2020–2022)</p>
-    </div>
+h3 {
+  font-size: 20px;
+}
 
-    <div class="project">
-      <h3>B.Tech in Computer Engineering</h3>
-      <div class="edu-flex">
-        <img src="mit-logo.png" class="edu-logo">
-        <p>MIT Academy of Engineering, Alandi (2022–2026)</p>
-      </div>
-    </div>
+/* HERO TEXT */
+.hero p {
+  font-size: 18px;
+  color: #020617;
+  font-weight: 500;
+}
 
-    <div class="edu-animation">🎓 Learning • Growing • Building</div>
-  </section>
+/* HERO LINE */
+.hero-line {
+  width: 80px;
+  height: 3px;
+  background: #38bdf8;
+  border: none;
+  margin: 15px auto;
+  border-radius: 10px;
+}
 
-  <!-- SKILLS -->
-  <section id="skills" class="hidden">
-    <h2>🛠 Skills</h2>
+/* FLOAT TEXT */
+.floating-text {
+  font-size: 16px;
+  color: #0284c7;
+  margin-top: 10px;
+  animation: floatText 3s ease-in-out infinite;
+}
 
-    <ul>
-      <li>Artificial Intelligence</li>
-      <li>Machine Learning</li>
-      <li>Data Science</li>
-      <li>Critical Thinking</li>
-      <li>Analytical Thinking</li>
-      <li>Communication</li>
-    </ul>
+@keyframes floatText {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 
-    <h3>Tech Stack</h3>
+/* SECTIONS */
+section {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 40px 25px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
 
-    <div class="tech-stack">
-      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
-      <div class="tech-item"><img src="tableu.png"><span>Tableau</span></div>
-      <div class="tech-item"><img src="powerbi.png"><span>Power BI</span></div>
-      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>Machine Learning</span></div>
-      <div class="tech-item"><img src="https://img.icons8.com/color/48/artificial-intelligence.png"><span>GenAI</span></div>
-      <div class="tech-item"><img src="https://img.icons8.com/color/48/chatgpt.png"><span>LLMs / Chatbots</span></div>
-    </div>
-  </section>
+section:hover {
+  transform: translateY(-4px);
+}
 
-  <!-- PROJECTS -->
-  <section id="projects" class="hidden">
-    <h2>🚀 Projects</h2>
+/* TEXT */
+section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #020617;
+  font-weight: 500;
+}
 
-    <div class="project">
-      <h3>Multiple Face Recognition Using Genetic Algorithm</h3>
-      <p>Developed a face recognition system with improved accuracy and performance using optimization techniques.</p>
-      <a href="#" class="button">View Project</a>
-      <a href="#" class="button">GitHub</a>
-    </div>
+/* PROJECT CARDS */
+.project {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
 
-    <div class="project">
-      <h3>Marathi Barakhadi Website</h3>
-      <p>Built an interactive educational platform for children.</p>
-      <a href="#" class="button">View Project</a>
-    </div>
-  </section>
+.project p {
+  font-size: 17px;
+}
 
-  <!-- INTERNSHIPS -->
-  <section id="internships" class="hidden">
-    <h2>💼 Internships</h2>
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
 
-    <div class="project">
-      <h3>AI/ML Intern – MyJobGrow</h3>
-      <p>Worked on ML concepts and developed an attendance system.</p>
-    </div>
+/* SKILLS */
+ul {
+  list-style: none;
+  padding: 0;
+}
 
-    <div class="project">
-      <h3>Data Analytics Intern – Zaalima Development</h3>
-      <p>Performed customer churn analysis and insights.</p>
-    </div>
-  </section>
+ul li {
+  background: #f1f5f9;
+  margin: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 15px;
+  transition: 0.3s;
+}
 
-  <!-- RESEARCH -->
-  <section id="research" class="hidden">
-    <h2>📄 Research</h2>
+ul li:hover {
+  background: #38bdf8;
+  color: white;
+  transform: scale(1.08);
+}
 
-    <div class="project">
-      <h3>Comparative Analysis of ML Techniques</h3>
-      <p>Published in IJRASET (17 March 2026)</p>
-      <p><strong>DOI:</strong> https://doi.org/10.22214/ijraset.2026.78256</p>
-    </div>
-  </section>
+/* TECH STACK */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
 
-  <!-- 🔥 ACHIEVEMENTS -->
-  <section id="achievements" class="hidden">
-    <h2>🏆 Achievements</h2>
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
 
-    <div class="project">
-      <p>✔ Published Research Paper (IJRASET)</p>
-      <p>✔ Completed Multiple Internships</p>
-      <p>✔ Built AI/ML Projects</p>
-      <p>✔ Hands-on Experience in Data Analytics</p>
-    </div>
-  </section>
+.tech-item img {
+  width: 22px;
+  height: 22px;
+}
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="hidden">
-    <h2>📜 Certifications</h2>
+.tech-item:hover {
+  background: #38bdf8;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.35);
+}
 
-    <div class="project">
-      <h3>NPTEL - Cloud Computing</h3>
-      <a href="NPTEL.png" target="_blank" class="button">View</a>
-    </div>
+/* EDUCATION */
+.edu-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-    <div class="project">
-      <h3>Infosys - Power BI</h3>
-      <a href="Infosys.jpg" target="_blank" class="button">View</a>
-    </div>
+.edu-logo {
+  width: 95px;
+  background: white;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: 0.3s;
+}
 
-    <div class="project">
-      <h3>Eduskills - Virtual Internship</h3>
-      <a href="Eduskills.jpg" target="_blank" class="button">View</a>
-    </div>
+.edu-logo:hover {
+  transform: scale(1.1);
+}
 
-    <div class="project">
-      <h3>SkillMetrics - Blockchain</h3>
-      <a href="Skills.png" target="_blank" class="button">View</a>
-    </div>
-  </section>
+/* BUTTON */
+.button {
+  background: #0ea5e9;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
 
-  <!-- CONTACT -->
-  <section id="contact" class="hidden">
-    <h2>📞 Contact</h2>
+.button:hover {
+  background: #0284c7;
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(56,189,248,0.4);
+}
 
-    <p>📧 Email: omdeokar04@gmail.com</p>
-    <p>📱 Phone: 7020590021</p>
-    <p>🔗 LinkedIn: www.linkedin.com/in/omdeokar</p>
+/* 🔥 CONTACT SECTION IMPROVEMENT */
+#contact p {
+  font-size: 17px;
+  margin: 10px 0;
+}
 
-    <br>
+#contact p:hover {
+  color: #0284c7;
+  cursor: pointer;
+}
 
-    <a href="Resume.pdf" target="_blank" class="button">View Resume</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Om Ashok Deokar</p>
-    <p>Built with passion 🚀</p>
-  </footer>
-
-  <!-- 🔥 TYPING SCRIPT -->
-  <script>
-    const text = "AI/ML Engineer | Data Science Enthusiast";
-    let i = 0;
-    function type() {
-      if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 40);
-      }
-    }
-    type();
-  </script>
-
-</body>
-</html>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f9fafb;
+  color: #334155;
+}

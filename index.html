@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Om Ashok Deokar | Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -17,6 +17,7 @@
     <a href="#internships">Internships</a>
     <a href="#research">Research</a>
     <a href="#certifications">Certifications</a>
+    <a href="#achievements">Achievements</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -26,14 +27,18 @@
 
     <h1 class="fade-in">Om Ashok Deokar</h1>
 
-    <p class="fade-in delay">
-      <strong>Aspiring AI/ML Engineer | Data Science Enthusiast</strong>
-    </p>
+    <!-- 🔥 TYPING TEXT -->
+    <p id="typing"></p>
 
-    <!-- 🔥 HERO DIVIDER LINE ADDED -->
     <hr class="hero-line">
 
     <p class="floating-text">AI • ML • Data • Innovation</p>
+
+    <!-- 🔥 HERO BUTTONS -->
+    <div class="hero-buttons">
+      <a href="https://github.com/OmDeokar-2004" target="_blank" class="button">GitHub</a>
+      <a href="https://www.linkedin.com/in/omdeokar" target="_blank" class="button">LinkedIn</a>
+    </div>
   </header>
 
   <!-- ABOUT -->
@@ -63,7 +68,6 @@
 
     <div class="project">
       <h3>B.Tech in Computer Engineering</h3>
-
       <div class="edu-flex">
         <img src="mit-logo.png" class="edu-logo">
         <p>MIT Academy of Engineering, Alandi (2022–2026)</p>
@@ -89,37 +93,12 @@
     <h3>Tech Stack</h3>
 
     <div class="tech-stack">
-
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-        <span>Python</span>
-      </div>
-
-      <div class="tech-item">
-        <img src="tableu.png">
-        <span>Tableau</span>
-      </div>
-
-      <div class="tech-item">
-        <img src="powerbi.png">
-        <span>Power BI</span>
-      </div>
-
-      <div class="tech-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg">
-        <span>Machine Learning</span>
-      </div>
-
-      <div class="tech-item">
-        <img src="https://img.icons8.com/color/48/artificial-intelligence.png">
-        <span>GenAI</span>
-      </div>
-
-      <div class="tech-item">
-        <img src="https://img.icons8.com/color/48/chatgpt.png">
-        <span>LLMs / Chatbots</span>
-      </div>
-
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
+      <div class="tech-item"><img src="tableu.png"><span>Tableau</span></div>
+      <div class="tech-item"><img src="powerbi.png"><span>Power BI</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>Machine Learning</span></div>
+      <div class="tech-item"><img src="https://img.icons8.com/color/48/artificial-intelligence.png"><span>GenAI</span></div>
+      <div class="tech-item"><img src="https://img.icons8.com/color/48/chatgpt.png"><span>LLMs / Chatbots</span></div>
     </div>
   </section>
 
@@ -130,11 +109,14 @@
     <div class="project">
       <h3>Multiple Face Recognition Using Genetic Algorithm</h3>
       <p>Developed a face recognition system with improved accuracy and performance using optimization techniques.</p>
+      <a href="#" class="button">View Project</a>
+      <a href="#" class="button">GitHub</a>
     </div>
 
     <div class="project">
       <h3>Marathi Barakhadi Website</h3>
-      <p>Built an interactive educational platform for children to learn Marathi efficiently.</p>
+      <p>Built an interactive educational platform for children.</p>
+      <a href="#" class="button">View Project</a>
     </div>
   </section>
 
@@ -149,7 +131,7 @@
 
     <div class="project">
       <h3>Data Analytics Intern – Zaalima Development</h3>
-      <p>Performed customer churn analysis and data insights.</p>
+      <p>Performed customer churn analysis and insights.</p>
     </div>
   </section>
 
@@ -164,6 +146,18 @@
     </div>
   </section>
 
+  <!-- 🔥 ACHIEVEMENTS -->
+  <section id="achievements" class="hidden">
+    <h2>🏆 Achievements</h2>
+
+    <div class="project">
+      <p>✔ Published Research Paper (IJRASET)</p>
+      <p>✔ Completed Multiple Internships</p>
+      <p>✔ Built AI/ML Projects</p>
+      <p>✔ Hands-on Experience in Data Analytics</p>
+    </div>
+  </section>
+
   <!-- CERTIFICATIONS -->
   <section id="certifications" class="hidden">
     <h2>📜 Certifications</h2>
@@ -174,7 +168,7 @@
     </div>
 
     <div class="project">
-      <h3>Infosys - Building Interactive Dashboards with Microsoft Power BI</h3>
+      <h3>Infosys - Power BI</h3>
       <a href="Infosys.jpg" target="_blank" class="button">View</a>
     </div>
 
@@ -184,10 +178,9 @@
     </div>
 
     <div class="project">
-      <h3>SkillMetrics - Blockchain Technology</h3>
+      <h3>SkillMetrics - Blockchain</h3>
       <a href="Skills.png" target="_blank" class="button">View</a>
     </div>
-
   </section>
 
   <!-- CONTACT -->
@@ -209,40 +202,18 @@
     <p>Built with passion 🚀</p>
   </footer>
 
-  <!-- SCROLL ANIMATION -->
+  <!-- 🔥 TYPING SCRIPT -->
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    });
-    document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
-  </script>
-
-  <!-- ACTIVE NAV -->
-  <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach((a) => {
-        a.classList.remove("active");
-        if (a.getAttribute("href") === "#" + current) {
-          a.classList.add("active");
-        }
-      });
-    });
+    const text = "AI/ML Engineer | Data Science Enthusiast";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 40);
+      }
+    }
+    type();
   </script>
 
 </body>

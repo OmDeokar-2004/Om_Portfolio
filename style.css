@@ -1,13 +1,14 @@
 /* SMOOTH SCROLL */
 html {
   scroll-behavior: smooth;
+  background: #e6f0ff; /* 🔥 ensures full page blue */
 }
 
 /* BODY */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #f8fbff, #eef6ff); /* 🔵 light blue */
+  background: #e6f0ff !important; /* 🔥 strong visible light blue */
   color: #020617;
 }
 
@@ -16,12 +17,12 @@ nav {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background: white;
+  background: #f5faff; /* slight blue */
   padding: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #cfe0ff;
   box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
@@ -45,7 +46,7 @@ nav a.active {
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: white;
+  background: #f5faff; /* 🔵 bluish card */
   margin: 30px auto;
   max-width: 900px;
   border-radius: 16px;
@@ -119,7 +120,7 @@ section {
   max-width: 900px;
   margin: 25px auto;
   padding: 40px 25px;
-  background: #ffffff;
+  background: #f5faff; /* 🔥 bluish instead of white */
   border-radius: 14px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.06);
   transition: 0.3s;
@@ -139,11 +140,11 @@ section p {
 
 /* PROJECT CARDS */
 .project {
-  background: #ffffff;
+  background: #ffffff; /* keep white for contrast */
   padding: 20px;
   margin: 20px 0;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #cfe0ff;
   transition: all 0.3s ease;
 }
 
@@ -163,7 +164,7 @@ ul {
 }
 
 ul li {
-  background: #f1f5f9;
+  background: #e0edff; /* bluish */
   margin: 8px;
   padding: 10px 15px;
   border-radius: 8px;
@@ -190,7 +191,7 @@ ul li:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f1f5f9;
+  background: #e0edff;
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 15px;
@@ -221,7 +222,7 @@ ul li:hover {
   background: white;
   padding: 6px;
   border-radius: 8px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #cfe0ff;
   transition: 0.3s;
 }
 
@@ -261,6 +262,6 @@ ul li:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: #f0f7ff; /* 🔵 subtle blue */
+  background: #dbeafe; /* bluish footer */
   color: #334155;
 }

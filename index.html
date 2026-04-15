@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Om Ashok Deokar | Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -27,7 +27,6 @@
 
     <h1 class="fade-in">Om Ashok Deokar</h1>
 
-    <!-- TYPING TEXT -->
     <p id="typing"></p>
 
     <hr class="hero-line">
@@ -62,10 +61,13 @@
 
     <div class="project">
       <h3>B.Tech in Computer Engineering</h3>
+
       <div class="edu-flex">
         <img src="mit-logo.png" class="edu-logo">
+        <img src="SSPU1.png" class="edu-logo">
         <p>MIT Academy of Engineering, Alandi (2022–2026)</p>
       </div>
+
     </div>
 
     <div class="edu-animation">🎓 Learning • Growing • Building</div>
@@ -119,128 +121,3 @@
       <h3>AI/ML Intern – MyJobGrow</h3>
       <p>Worked on ML concepts and attendance system.</p>
     </div>
-
-    <div class="project">
-      <h3>Data Analytics Intern – Zaalima Development</h3>
-      <p>Performed customer churn analysis.</p>
-    </div>
-  </section>
-
-  <!-- RESEARCH -->
-  <section id="research" class="hidden">
-    <h2>📄 Research</h2>
-
-    <div class="project">
-      <h3>Comparative Analysis of ML Techniques</h3>
-      <p>Published in IJRASET</p>
-      <p><strong>DOI:</strong> https://doi.org/10.22214/ijraset.2026.78256</p>
-    </div>
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements" class="hidden">
-    <h2>🏆 Achievements</h2>
-
-    <div class="project">
-      <p>✔ Published Research Paper (IJRASET)</p>
-      <p>✔ Completed Multiple Internships</p>
-      <p>✔ Built AI/ML Projects</p>
-      <p>✔ Data Analytics Experience</p>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="hidden">
-    <h2>📜 Certifications</h2>
-
-    <div class="project">
-      <h3>NPTEL - Cloud Computing</h3>
-      <a href="NPTEL.png" target="_blank" class="button">View</a>
-    </div>
-
-    <div class="project">
-      <h3>Infosys - Power BI</h3>
-      <a href="Infosys.jpg" target="_blank" class="button">View</a>
-    </div>
-
-    <div class="project">
-      <h3>Eduskills - Virtual Internship</h3>
-      <a href="Eduskills.jpg" target="_blank" class="button">View</a>
-    </div>
-
-    <div class="project">
-      <h3>SkillMetrics - Blockchain</h3>
-      <a href="Skills.png" target="_blank" class="button">View</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="hidden">
-    <h2>📞 Contact</h2>
-
-    <p>📧 Email: omdeokar04@gmail.com</p>
-    <p>📱 Phone: 7020590021</p>
-    <p>🔗 LinkedIn: www.linkedin.com/in/omdeokar</p>
-    <p>💻 GitHub: https://github.com/OmDeokar-2004</p>
-
-    <br>
-
-    <a href="Resume.pdf" target="_blank" class="button">View Resume</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Om Ashok Deokar</p>
-    <p>Built with passion 🚀</p>
-  </footer>
-
-  <!-- TYPING SCRIPT -->
-  <script>
-    const text = "AI/ML Engineer | Data Science Enthusiast";
-    let i = 0;
-    function type() {
-      if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 40);
-      }
-    }
-    type();
-  </script>
-
-  <!-- NEW: ACTIVE NAV + SCROLL ANIMATION -->
-  <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
-    });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    });
-
-    document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
-  </script>
-
-</body>
-</html>

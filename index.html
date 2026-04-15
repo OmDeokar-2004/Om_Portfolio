@@ -39,7 +39,7 @@
   <section id="about" class="hidden">
     <h2>👨‍💻 About Me</h2>
     <p>
-      I am a Computer Engineering graduate with a strong interest in Artificial Intelligence,Machine Learning and Data Science.
+      I am a Computer Engineering graduate with a strong interest in Artificial Intelligence, Machine Learning and Data Science.
       I enjoy applying analytical thinking and technical skills to solve real-world problems.
       I have worked on academic projects and internships.
       I am a curious and motivated learner and I am eager to continuously learn and grow in the tech industry.
@@ -206,6 +206,40 @@
       }
     }
     type();
+  </script>
+
+  <!-- NEW: ACTIVE NAV + SCROLL ANIMATION -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
   </script>
 
 </body>

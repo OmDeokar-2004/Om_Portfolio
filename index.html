@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Om Ashok Deokar | Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -70,13 +70,11 @@
 
 <div class="project">
   <h3>B.Tech in Computer Engineering</h3>
-
   <div class="edu-flex">
     <img src="mit-logo.png" class="edu-logo">
     <img src="SPPU1.png" class="edu-logo">
     <p>MIT Academy of Engineering, Alandi (2022–2026)</p>
   </div>
-
 </div>
 
 <div class="edu-animation">🎓 Learning • Growing • Building</div>
@@ -90,37 +88,13 @@
     <h2>🛠 Skills</h2>
 
 ```
-<!-- UPDATED SKILLS WITH ICONS -->
 <ul class="tech-stack">
-  <li class="tech-item">
-    <img src="AI.png">
-    <span>Artificial Intelligence</span>
-  </li>
-
-  <li class="tech-item">
-    <img src="ML.png">
-    <span>Machine Learning</span>
-  </li>
-
-  <li class="tech-item">
-    <img src="DS.png">
-    <span>Data Science</span>
-  </li>
-
-  <li class="tech-item">
-    <img src="CT.png">
-    <span>Critical Thinking</span>
-  </li>
-
-  <li class="tech-item">
-    <img src="AT.png">
-    <span>Analytical Thinking</span>
-  </li>
-
-  <li class="tech-item">
-    <img src="CM.png">
-    <span>Communication</span>
-  </li>
+  <li class="tech-item"><img src="AI.png"><span>Artificial Intelligence</span></li>
+  <li class="tech-item"><img src="ML.png"><span>Machine Learning</span></li>
+  <li class="tech-item"><img src="DS.png"><span>Data Science</span></li>
+  <li class="tech-item"><img src="CT.png"><span>Critical Thinking</span></li>
+  <li class="tech-item"><img src="AT.png"><span>Analytical Thinking</span></li>
+  <li class="tech-item"><img src="CM.png"><span>Communication</span></li>
 </ul>
 
 <h3>Tech Stack</h3>
@@ -206,29 +180,41 @@
 
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <!-- CERTIFICATIONS (ONLY CHANGE: LOGOS ADDED) -->
 
   <section id="certifications" class="hidden">
     <h2>📜 Certifications</h2>
 
 ```
 <div class="project">
-  <h3>NPTEL - Cloud Computing</h3>
+  <div class="edu-flex">
+    <img src="NPTEL.png" class="edu-logo">
+    <h3>NPTEL - Cloud Computing</h3>
+  </div>
   <a href="NPTEL.png" target="_blank" class="button">View</a>
 </div>
 
 <div class="project">
-  <h3>Infosys - Power BI</h3>
+  <div class="edu-flex">
+    <img src="Infosys.png" class="edu-logo">
+    <h3>Infosys - Power BI</h3>
+  </div>
   <a href="Infosys.jpg" target="_blank" class="button">View</a>
 </div>
 
 <div class="project">
-  <h3>Eduskills - Virtual Internship</h3>
+  <div class="edu-flex">
+    <img src="Eduskills.png" class="edu-logo">
+    <h3>Eduskills - Virtual Internship</h3>
+  </div>
   <a href="Eduskills.jpg" target="_blank" class="button">View</a>
 </div>
 
 <div class="project">
-  <h3>SkillMetrics - Blockchain</h3>
+  <div class="edu-flex">
+    <img src="Skillmetrics.png" class="edu-logo">
+    <h3>SkillMetrics - Blockchain</h3>
+  </div>
   <a href="Skills.png" target="_blank" class="button">View</a>
 </div>
 ```
@@ -260,7 +246,7 @@
     <p>Built with passion 🚀</p>
   </footer>
 
-  <!-- TYPING SCRIPT -->
+  <!-- SCRIPTS SAME -->
 
   <script>
     const text = "AI/ML Engineer | Data Science Enthusiast";
@@ -275,15 +261,12 @@
     type();
   </script>
 
-  <!-- SCROLL + ACTIVE NAV -->
-
   <script>
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");
 
     window.addEventListener("scroll", () => {
       let current = "";
-
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 120;
         if (window.scrollY >= sectionTop) {

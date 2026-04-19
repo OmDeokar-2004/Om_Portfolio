@@ -44,7 +44,7 @@ nav a.active {
   color: #0369a1;
 }
 
-/* UNDERLINE ANIMATION */
+/* UNDERLINE */
 nav a::after {
   content: "";
   position: absolute;
@@ -73,7 +73,7 @@ nav a.active::after {
   box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
-/* PROFILE IMAGE */
+/* PROFILE */
 .profile-img {
   width: 190px;
   height: 190px;
@@ -130,7 +130,7 @@ h3 {
   50% { transform: translateY(-6px); }
 }
 
-/* SECTIONS (GLASS CARDS) */
+/* SECTIONS */
 section {
   max-width: 900px;
   margin: 25px auto;
@@ -164,12 +164,12 @@ section p {
   line-height: 1.8;
 }
 
-/* PROJECT CARDS */
+/* PROJECT (CERT CARDS) */
 .project {
   background: rgba(255,255,255,0.9);
-  padding: 20px;
+  padding: 18px;
   margin: 20px 0;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid rgba(200,220,255,0.5);
   transition: 0.3s;
 }
@@ -177,6 +177,29 @@ section p {
 .project:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* 🔥 CERTIFICATION FLEX (NEW) */
+.cert-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* 🔥 CERT LOGO FIX (IMPORTANT) */
+.cert-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* OPTIONAL HOVER */
+.cert-logo:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 /* SKILLS */
@@ -246,8 +269,10 @@ ul li:hover {
 
 /* BUTTON */
 .button {
+  display: inline-block;
+  margin-top: 10px;
   background: #0284c7;
-  padding: 10px 20px;
+  padding: 8px 18px;
   border-radius: 8px;
   color: white;
   text-decoration: none;

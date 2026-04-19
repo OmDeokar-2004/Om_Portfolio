@@ -1,102 +1,243 @@
+/* SMOOTH SCROLL */
 html {
   scroll-behavior: smooth;
 }
 
+/* BODY */
 body {
   margin: 0;
-  font-family: 'Segoe UI';
-  background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #e0f2fe, #f0f9ff);
+  color: #020617;
 }
 
-/* NAV */
+/* NAVBAR */
 nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 15px;
+  flex-wrap: wrap;
+  gap: 18px;
   background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  padding: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
   color: #0284c7;
   text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #0369a1;
+}
+
+/* ACTIVE NAV */
+nav a.active {
+  color: #0369a1;
+}
+
+/* UNDERLINE */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #0284c7;
+  transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 50px;
+  padding: 60px 20px;
   background: rgba(255,255,255,0.7);
-  margin: 30px;
+  backdrop-filter: blur(12px);
+  margin: 30px auto;
+  max-width: 900px;
   border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
 .profile-img {
-  width: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 15px;
+  border: 3px solid #38bdf8;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 42px;
+  color: #0369a1;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* HERO LINE */
+.hero-line {
+  width: 80px;
+  height: 3px;
+  background: #38bdf8;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+
+/* FLOAT TEXT */
+.floating-text {
+  color: #0284c7;
+  animation: floatText 3s infinite;
+}
+
+@keyframes floatText {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 /* SECTIONS */
 section {
-  margin: 20px;
-  padding: 30px;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 35px 25px;
   background: rgba(255,255,255,0.7);
-  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
-/* PROJECT */
+section:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* TEXT */
+section p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* PROJECT CARDS */
 .project {
+  background: rgba(255,255,255,0.9);
+  padding: 18px;
   margin: 15px 0;
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+  transition: 0.3s;
 }
 
-/* EDUCATION */
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* EDUCATION FLEX */
 .edu-flex {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .edu-logo {
-  width: 60px;
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border: none;
 }
 
 /* SKILLS */
 .tech-stack {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .tech-item {
-  background: #e0f2fe;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(224,242,254,0.8);
+  padding: 8px 12px;
   border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
-/* 🔥 CERT FIX */
+.tech-item img {
+  width: 22px;
+  height: 22px;
+}
+
+.tech-item:hover {
+  background: #38bdf8;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* 🔥 CERTIFICATIONS FIX */
 .cert-flex {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .cert-logo {
-  width: 40px;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border: none;
 }
 
-/* ANIMATION FIX */
-.hidden {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s;
+/* BUTTON */
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  background: #0284c7;
+  padding: 8px 18px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.show {
-  opacity: 1;
-  transform: translateY(0);
+.button:hover {
+  background: #0369a1;
+  transform: scale(1.08);
+}
+
+/* CONTACT */
+#contact p {
+  margin: 8px 0;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
+  background: rgba(219,234,254,0.6);
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+  opacity: 1;   /* 🔥 FIXED: prevents disappearing */
+  transform: none;
+}
+
+.show {
+  opacity: 1;
 }

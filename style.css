@@ -17,13 +17,13 @@ nav {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(14px);
   padding: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #cfe0ff;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
 /* NAV LINKS */
@@ -35,18 +35,16 @@ nav a {
   transition: 0.3s;
 }
 
-/* HOVER EFFECT */
 nav a:hover {
   color: #0369a1;
   transform: scale(1.08);
 }
 
-/* ACTIVE LINK */
 nav a.active {
   color: #0369a1;
 }
 
-/* 🔥 UNDERLINE ANIMATION */
+/* UNDERLINE ANIMATION */
 nav a::after {
   content: "";
   position: absolute;
@@ -67,12 +65,12 @@ nav a.active::after {
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(16px);
   margin: 30px auto;
   max-width: 900px;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
 /* PROFILE IMAGE */
@@ -99,7 +97,6 @@ h1 {
 
 h2 {
   font-size: 26px;
-  color: #020617;
 }
 
 h3 {
@@ -109,7 +106,6 @@ h3 {
 /* HERO TEXT */
 .hero p {
   font-size: 18px;
-  color: #020617;
   font-weight: 500;
 }
 
@@ -134,23 +130,23 @@ h3 {
   50% { transform: translateY(-6px); }
 }
 
-/* SECTIONS */
+/* SECTIONS (GLASS CARDS) */
 section {
   max-width: 900px;
   margin: 25px auto;
   padding: 40px 25px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
   transition: 0.3s;
 }
 
 section:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
-/* 🔥 SCROLL ANIMATION */
+/* SCROLL ANIMATION */
 .hidden {
   opacity: 0;
   transform: translateY(30px);
@@ -166,22 +162,21 @@ section:hover {
 section p {
   font-size: 18px;
   line-height: 1.8;
-  color: #020617;
 }
 
 /* PROJECT CARDS */
 .project {
-  background: #ffffff;
+  background: rgba(255,255,255,0.9);
   padding: 20px;
   margin: 20px 0;
   border-radius: 12px;
-  border: 1px solid #cfe0ff;
+  border: 1px solid rgba(200,220,255,0.5);
   transition: 0.3s;
 }
 
 .project:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* SKILLS */
@@ -191,7 +186,7 @@ ul {
 }
 
 ul li {
-  background: #e0f2fe;
+  background: rgba(224,242,254,0.8);
   margin: 8px;
   padding: 10px 15px;
   border-radius: 8px;
@@ -216,7 +211,7 @@ ul li:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #e0f2fe;
+  background: rgba(224,242,254,0.8);
   padding: 8px 12px;
   border-radius: 8px;
   transition: 0.3s;
@@ -238,10 +233,11 @@ ul li:hover {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .edu-logo {
-  width: 95px;
+  width: 90px;
   background: white;
   padding: 6px;
   border-radius: 8px;
@@ -261,6 +257,7 @@ ul li:hover {
 .button:hover {
   background: #0369a1;
   transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(56,189,248,0.4);
 }
 
 /* CONTACT */

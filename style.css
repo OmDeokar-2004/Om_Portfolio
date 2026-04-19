@@ -1,16 +1,102 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(255,255,255,0.6);
+}
+
+nav a {
+  color: #0284c7;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: rgba(255,255,255,0.7);
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 15px;
+}
+
+/* SECTIONS */
+section {
+  margin: 20px;
+  padding: 30px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 15px;
+}
+
+/* PROJECT */
+.project {
+  margin: 15px 0;
+}
+
+/* EDUCATION */
+.edu-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-logo {
+  width: 60px;
+}
+
+/* SKILLS */
+.tech-stack {
+  display: flex;
+  gap: 10px;
+}
+
+.tech-item {
+  background: #e0f2fe;
+  padding: 10px;
+  border-radius: 8px;
+}
+
 /* 🔥 CERT FIX */
 .cert-flex {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .cert-logo {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
+  width: 40px;
 }
 
-.project h3 {
-  margin: 0;
+/* ANIMATION FIX */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
 }

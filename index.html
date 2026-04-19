@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Om Ashok Deokar | Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -13,11 +14,7 @@
   <a href="#about">About</a>
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#internships">Internships</a>
-  <a href="#research">Research</a>
   <a href="#certifications">Certifications</a>
-  <a href="#achievements">Achievements</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -32,33 +29,30 @@
 
 <!-- ABOUT -->
 <section id="about" class="hidden">
-  <h2>👨‍💻 About Me</h2>
-  <p>
-    I am a Computer Engineering graduate with a strong interest in AI, ML and Data Science.
-    I enjoy solving real-world problems using analytical thinking and technical skills.
-  </p>
+  <h2>About Me</h2>
+  <p>I am a Computer Engineering student passionate about AI, ML and Data Science.</p>
 </section>
 
 <!-- EDUCATION -->
 <section id="education" class="hidden">
-  <h2>🎓 Education</h2>
+  <h2>Education</h2>
 
   <div class="project">
     <h3>Secondary School (X)</h3>
-    <p>Rewachand Bhojwani Academy (2010–2020)</p>
+    <p>Rewachand Bhojwani Academy</p>
   </div>
 
   <div class="project">
     <h3>Intermediate (XII)</h3>
-    <p>Namorims Junior College, Pune (2020–2022)</p>
+    <p>Namorims Junior College</p>
   </div>
 
   <div class="project">
-    <h3>B.Tech in Computer Engineering</h3>
+    <h3>B.Tech</h3>
     <div class="edu-flex">
       <img src="mit-logo.png" class="edu-logo">
       <img src="SPPU1.png" class="edu-logo">
-      <p>MIT Academy of Engineering, Alandi (2022–2026)</p>
+      <p>MIT Academy of Engineering</p>
     </div>
   </div>
 
@@ -66,35 +60,25 @@
 
 <!-- SKILLS -->
 <section id="skills" class="hidden">
-  <h2>🛠 Skills</h2>
-
-  <ul class="tech-stack">
-    <li class="tech-item"><img src="AI.png"><span>Artificial Intelligence</span></li>
-    <li class="tech-item"><img src="ML.png"><span>Machine Learning</span></li>
-    <li class="tech-item"><img src="DS.png"><span>Data Science</span></li>
-    <li class="tech-item"><img src="CT.png"><span>Critical Thinking</span></li>
-    <li class="tech-item"><img src="AT.png"><span>Analytical Thinking</span></li>
-    <li class="tech-item"><img src="CM.png"><span>Communication</span></li>
-  </ul>
-
-  <h3>Tech Stack</h3>
+  <h2>Skills</h2>
 
   <div class="tech-stack">
-    <div class="tech-item"><img src="tableu.png"><span>Tableau</span></div>
-    <div class="tech-item"><img src="powerbi.png"><span>Power BI</span></div>
+    <div class="tech-item"><img src="AI.png">AI</div>
+    <div class="tech-item"><img src="ML.png">ML</div>
+    <div class="tech-item"><img src="DS.png">Data Science</div>
   </div>
+
 </section>
 
-<!-- CERTIFICATIONS (🔥 FIXED STRUCTURE) -->
+<!-- CERTIFICATIONS -->
 <section id="certifications" class="hidden">
-  <h2>📜 Certifications</h2>
+  <h2>Certifications</h2>
 
   <div class="project">
     <div class="cert-flex">
       <img src="NPTEL.png" class="cert-logo">
       <h3>NPTEL - Cloud Computing</h3>
     </div>
-    <a href="NPTEL.png" target="_blank" class="button">View</a>
   </div>
 
   <div class="project">
@@ -102,15 +86,13 @@
       <img src="Infosys.png" class="cert-logo">
       <h3>Infosys - Power BI</h3>
     </div>
-    <a href="Infosys.jpg" target="_blank" class="button">View</a>
   </div>
 
   <div class="project">
     <div class="cert-flex">
       <img src="Eduskills.png" class="cert-logo">
-      <h3>Eduskills - Virtual Internship</h3>
+      <h3>Eduskills - Internship</h3>
     </div>
-    <a href="Eduskills.jpg" target="_blank" class="button">View</a>
   </div>
 
   <div class="project">
@@ -118,25 +100,22 @@
       <img src="Skillmetrics.png" class="cert-logo">
       <h3>SkillMetrics - Blockchain</h3>
     </div>
-    <a href="Skills.png" target="_blank" class="button">View</a>
   </div>
 
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="hidden">
-  <h2>📞 Contact</h2>
-  <p>📧 Email: omdeokar04@gmail.com</p>
-  <p>🔗 LinkedIn: www.linkedin.com/in/omdeokar</p>
-  <p>💻 GitHub: github.com/OmDeokar-2004</p>
+  <h2>Contact</h2>
+  <p>Email: omdeokar04@gmail.com</p>
+  <p>GitHub: OmDeokar-2004</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Om Ashok Deokar</p>
+  <p>© 2026 Om Deokar</p>
 </footer>
 
-<!-- SCRIPT -->
+<!-- TYPING EFFECT -->
 <script>
 const text = "AI/ML Engineer | Data Science Enthusiast";
 let i = 0;
@@ -148,6 +127,19 @@ function type() {
   }
 }
 type();
+</script>
+
+<!-- 🔥 SCROLL FIX (IMPORTANT) -->
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
 </script>
 
 </body>

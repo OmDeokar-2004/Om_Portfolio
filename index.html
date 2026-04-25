@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Om Ashok Deokar | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav>
   <a href="index.html" class="active">Home</a>
   <a href="about.html">About</a>
@@ -23,109 +22,92 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <img src="profile.jpg" class="profile-img">
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <img src="profile.jpg" class="profile-img" alt="Profile">
 
-  <h1 class="fade-in">Om Ashok Deokar</h1>
+  <h1>Om Ashok Deokar</h1>
+  <p>AI/ML Engineer | Data Science Enthusiast</p>
 
-  <p id="typing"></p>
-
-  <hr class="hero-line">
-
-  <p class="floating-text">AI • ML • Data • Innovation</p>
-</header>
-
-<!-- HOME INTRO -->
-<section>
-  <h2>Welcome 👋</h2>
-  <p>
-    Welcome to my portfolio. I am a Computer Engineering student passionate about 
-    Artificial Intelligence, Machine Learning and Data Science.
+  <p style="margin-top:10px; color:#0284c7;">
+    AI • ML • Data • Innovation
   </p>
-</section>
+</div>
 
-<!-- QUICK NAV CARDS -->
+<!-- ================= MAIN SECTIONS ================= -->
 <section>
-  <h2>Explore My Work 🚀</h2>
 
+  <h2>🚀 Explore My Work</h2>
+
+  <!-- ABOUT -->
   <div class="project">
     <h3>👨‍💻 About Me</h3>
-    <p>Know more about my background and interests</p>
-    <a href="about.html" class="button">View</a>
+    <p>Know more about my background and interests.</p>
+    <a href="about.html">View</a>
   </div>
 
+  <!-- EDUCATION -->
   <div class="project">
     <h3>🎓 Education</h3>
-    <p>My academic journey and institutions</p>
-    <a href="education.html" class="button">View</a>
+    <p>My academic journey and institutions.</p>
+    <a href="education.html">View</a>
   </div>
 
+  <!-- SKILLS -->
   <div class="project">
     <h3>🛠 Skills</h3>
-    <p>Technical and analytical skillset</p>
-    <a href="skills.html" class="button">View</a>
+    <p>Technical and analytical skillset.</p>
+    <a href="skills.html">View</a>
   </div>
 
+  <!-- PROJECTS -->
   <div class="project">
-    <h3>🚀 Projects</h3>
-    <p>Hands-on work and implementations</p>
-    <a href="projects.html" class="button">View</a>
+    <h3>📊 Projects</h3>
+    <p>Hands-on projects and implementations.</p>
+    <a href="projects.html">View</a>
   </div>
 
+  <!-- INTERNSHIPS -->
   <div class="project">
     <h3>💼 Internships</h3>
-    <p>Industry experience and practical exposure</p>
-    <a href="internships.html" class="button">View</a>
+    <p>Professional experience and training.</p>
+    <a href="internships.html">View</a>
   </div>
 
+  <!-- RESEARCH -->
   <div class="project">
     <h3>📄 Research</h3>
-    <p>Published research work</p>
-    <a href="research.html" class="button">View</a>
+    <p>Research papers and academic work.</p>
+    <a href="research.html">View</a>
   </div>
 
+  <!-- CERTIFICATIONS -->
   <div class="project">
     <h3>📜 Certifications</h3>
-    <p>Courses and professional certifications</p>
-    <a href="certifications.html" class="button">View</a>
+    <p>Courses and certifications completed.</p>
+    <a href="certifications.html">View</a>
   </div>
 
+  <!-- ACHIEVEMENTS -->
   <div class="project">
     <h3>🏆 Achievements</h3>
-    <p>Milestones and accomplishments</p>
-    <a href="achievements.html" class="button">View</a>
+    <p>Milestones and accomplishments.</p>
+    <a href="achievements.html">View</a>
   </div>
 
+  <!-- CONTACT -->
   <div class="project">
     <h3>📞 Contact</h3>
-    <p>Get in touch with me</p>
-    <a href="contact.html" class="button">View</a>
+    <p>Get in touch with me.</p>
+    <a href="contact.html">View</a>
   </div>
 
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 Om Ashok Deokar</p>
-  <p>Built with passion 🚀</p>
 </footer>
-
-<!-- TYPING EFFECT -->
-<script>
-const text = "AI/ML Engineer | Data Science Enthusiast";
-let i = 0;
-
-function type() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(type, 40);
-  }
-}
-
-type();
-</script>
 
 </body>
 </html>

@@ -10,7 +10,7 @@ body {
   color: #020617;
 }
 
-/* remove default link style */
+/* remove link default */
 a {
   text-decoration: none;
 }
@@ -37,7 +37,6 @@ nav a {
   color: #0284c7;
   font-weight: 600;
   position: relative;
-  transition: 0.3s;
 }
 
 nav a:hover {
@@ -65,50 +64,6 @@ nav a.active::after {
   width: 100%;
 }
 
-/* ================= HERO ================= */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(12px);
-  margin: 30px auto;
-  max-width: 900px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-/* profile */
-.profile-img {
-  width: 170px;
-  height: 170px;
-  border-radius: 16px;
-  border: 3px solid #38bdf8;
-  object-fit: cover;
-}
-
-h1 {
-  font-size: 40px;
-  color: #0369a1;
-  margin: 10px 0;
-}
-
-.subtitle {
-  font-size: 18px;
-}
-
-.highlight {
-  color: #0284c7;
-}
-
-/* small line */
-.hero-line {
-  width: 60px;
-  height: 3px;
-  background: #38bdf8;
-  margin: 10px auto;
-  border-radius: 10px;
-}
-
 /* ================= SECTION ================= */
 section {
   max-width: 900px;
@@ -120,43 +75,81 @@ section {
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
-/* ================= CARDS ================= */
-.project {
-  background: rgba(255,255,255,0.9);
+/* ================= TIMELINE ================= */
+.timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 25px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(#38bdf8, #0284c7);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  background: #38bdf8;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background: rgba(255,255,255,0.85);
   padding: 18px;
-  margin: 15px 0;
   border-radius: 12px;
   border: 1px solid #dbeafe;
-  transition: 0.3s;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-/* ================= BUTTON ================= */
-.button-outline {
+/* ================= DATE ================= */
+.date-badge {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  border-radius: 8px;
-
-  border: 2px solid #0284c7;
-  color: #0284c7;
-
-  font-weight: 500;
-  font-size: 14px;
-
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.button-outline:hover {
+  font-size: 12px;
   background: #0284c7;
   color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(2,132,199,0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* ================= EDUCATION FIX ================= */
+
+/* MAIN LOGO */
+.edu-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* SECOND LOGO SMALL */
+.edu-logo-small {
+  width: 45px;
+  margin-top: 8px;
+}
+
+/* FLEX FIX */
+.edu-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;   /* 🔥 prevents breaking */
 }
 
 /* ================= FOOTER ================= */
@@ -165,22 +158,4 @@ footer {
   padding: 20px;
   background: rgba(219,234,254,0.6);
   margin-top: 30px;
-}
-
-/* FIX EDUCATION LOGO SIZE */
-.edu-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  background: white;
-  padding: 5px;
-  border-radius: 8px;
-}
-
-/* Align text nicely */
-.edu-flex {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
 }

@@ -10,6 +10,15 @@ body {
   color: #020617;
 }
 
+/* remove default link colors */
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
 /* ================= NAVBAR ================= */
 nav {
   display: flex;
@@ -26,7 +35,6 @@ nav {
 
 nav a {
   color: #0284c7;
-  text-decoration: none;
   font-weight: 600;
   position: relative;
   transition: 0.3s;
@@ -67,10 +75,10 @@ nav a.active::after {
   max-width: 900px;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  border: none; /* removes unwanted line */
+  border: none;
 }
 
-/* PROFILE IMAGE */
+/* profile image */
 .profile-img {
   width: 170px;
   height: 170px;
@@ -79,7 +87,7 @@ nav a.active::after {
   object-fit: cover;
 }
 
-/* TEXT */
+/* text */
 h1 {
   font-size: 40px;
   color: #0369a1;
@@ -95,7 +103,7 @@ h1 {
   font-weight: 500;
 }
 
-/* NICE SMALL LINE (OPTIONAL) */
+/* small line */
 .hero-line {
   width: 60px;
   height: 3px;
@@ -138,7 +146,7 @@ section {
   padding: 8px 18px;
   border-radius: 8px;
   color: white;
-  text-decoration: none;
+  font-weight: 500;
   transition: 0.3s;
 }
 

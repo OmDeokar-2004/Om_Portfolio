@@ -1,9 +1,11 @@
-/* SMOOTH SCROLL */
+/* ============================= */
+/* GLOBAL */
+/* ============================= */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* BODY */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -11,7 +13,10 @@ body {
   color: #020617;
 }
 
+/* ============================= */
 /* NAVBAR */
+/* ============================= */
+
 nav {
   display: flex;
   justify-content: center;
@@ -58,7 +63,10 @@ nav a.active::after {
   width: 100%;
 }
 
-/* SECTIONS */
+/* ============================= */
+/* SECTION (GLASS UI) */
+/* ============================= */
+
 section {
   max-width: 900px;
   margin: 25px auto;
@@ -87,7 +95,26 @@ section p {
   line-height: 1.7;
 }
 
-/* 🔥 ACHIEVEMENT CARDS (PREMIUM) */
+/* ============================= */
+/* COMMON FLEX */
+/* ============================= */
+
+.edu-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.edu-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* ============================= */
+/* ACHIEVEMENTS */
+/* ============================= */
+
 .achievement-card {
   background: linear-gradient(
     135deg,
@@ -112,7 +139,96 @@ section p {
   color: #0369a1;
 }
 
+/* ============================= */
+/* 🔥 INTERNSHIP TIMELINE */
+/* ============================= */
+
+.timeline-section {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 25px;
+}
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(#38bdf8, #0284c7);
+  border-radius: 10px;
+}
+
+/* item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 35px;
+  padding-left: 30px;
+}
+
+/* dot */
+.timeline-dot {
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(56,189,248,0.6);
+}
+
+/* card */
+.timeline-content {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.85),
+    rgba(224,242,254,0.7)
+  );
+
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(200,220,255,0.5);
+  transition: 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateX(6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* date badge */
+.date-badge {
+  display: inline-block;
+  font-size: 13px;
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* skills */
+.tag {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0284c7;
+  font-weight: 500;
+}
+
+/* ============================= */
 /* FOOTER */
+/* ============================= */
+
 footer {
   text-align: center;
   padding: 20px;

@@ -254,3 +254,71 @@ footer {
 .show {
   opacity: 1;
 }
+
+/* 🔥 TIMELINE INTERNSHIPS */
+
+.timeline-section {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(#38bdf8, #0284c7);
+  border-radius: 10px;
+}
+
+/* each item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+/* dot */
+.timeline-dot {
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(56,189,248,0.6);
+}
+
+/* content card */
+.timeline-content {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(200,220,255,0.5);
+  transition: 0.3s;
+}
+
+/* hover effect */
+.timeline-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* tags */
+.tag {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0284c7;
+  font-weight: 500;
+}

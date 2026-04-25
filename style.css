@@ -166,3 +166,21 @@ footer {
   background: rgba(219,234,254,0.6);
   margin-top: 30px;
 }
+
+/* FIX EDUCATION LOGO SIZE */
+.edu-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* Align text nicely */
+.edu-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}

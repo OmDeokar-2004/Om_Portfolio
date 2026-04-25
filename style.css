@@ -1,4 +1,5 @@
 /* ================= GLOBAL ================= */
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,7 +11,7 @@ body {
   color: #020617;
 }
 
-/* remove default link style */
+/* remove default links */
 a {
   text-decoration: none;
 }
@@ -20,12 +21,13 @@ a:visited {
 }
 
 /* ================= NAVBAR ================= */
+
 nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 18px;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.7);
   backdrop-filter: blur(12px);
   padding: 14px;
   position: sticky;
@@ -37,7 +39,6 @@ nav a {
   color: #0284c7;
   font-weight: 600;
   position: relative;
-  transition: 0.3s;
 }
 
 nav a:hover {
@@ -48,7 +49,7 @@ nav a.active {
   color: #0369a1;
 }
 
-/* underline */
+/* underline animation */
 nav a::after {
   content: "";
   position: absolute;
@@ -65,23 +66,92 @@ nav a.active::after {
   width: 100%;
 }
 
+/* ================= HERO ================= */
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.profile-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
+  border: 3px solid #38bdf8;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 38px;
+  color: #0369a1;
+  margin: 12px 0;
+}
+
+.subtitle {
+  font-size: 18px;
+}
+
+.highlight {
+  color: #0284c7;
+}
+
 /* ================= SECTION ================= */
+
 section {
   max-width: 900px;
   margin: 25px auto;
   padding: 35px 25px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.75);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* ================= CARDS ================= */
+
+.project {
+  background: rgba(255,255,255,0.9);
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
   transition: 0.3s;
 }
 
-section:hover {
-  transform: translateY(-4px);
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ================= BUTTON ================= */
+
+.button-outline {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid #0284c7;
+  color: #0284c7;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.button-outline:hover {
+  background: #0284c7;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(2,132,199,0.3);
 }
 
 /* ================= TIMELINE ================= */
+
 .timeline {
   position: relative;
   margin-top: 30px;
@@ -96,15 +166,16 @@ section:hover {
   width: 3px;
   height: 100%;
   background: linear-gradient(#38bdf8, #0284c7);
-  border-radius: 10px;
 }
 
+/* item */
 .timeline-item {
   position: relative;
   margin-bottom: 30px;
   padding-left: 30px;
 }
 
+/* dot */
 .timeline-dot {
   position: absolute;
   left: 2px;
@@ -113,11 +184,11 @@ section:hover {
   height: 14px;
   background: #38bdf8;
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(56,189,248,0.6);
 }
 
+/* content */
 .timeline-content {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   padding: 18px;
   border-radius: 12px;
   border: 1px solid #dbeafe;
@@ -126,10 +197,9 @@ section:hover {
 
 .timeline-content:hover {
   transform: translateX(5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* ================= DATE ================= */
+/* date badge */
 .date-badge {
   display: inline-block;
   font-size: 12px;
@@ -141,6 +211,13 @@ section:hover {
 }
 
 /* ================= EDUCATION ================= */
+
+.edu-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .edu-logo {
   width: 55px;
   height: 55px;
@@ -150,32 +227,38 @@ section:hover {
   border-radius: 8px;
 }
 
-.edu-logo-small {
-  width: 45px;
-  margin-top: 8px;
-}
-
-.edu-flex {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: nowrap;
-}
-
-/* ================= SKILLS BAR ================= */
-.skill-container {
-  margin-top: 20px;
-}
+/* ================= SKILLS (🔥 PREMIUM) ================= */
 
 .skill {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-.skill-title {
-  font-weight: 600;
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
+.skill-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.skill-header span:first-of-type {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.percent {
+  font-size: 14px;
+  color: #0284c7;
+}
+
+/* bar */
 .skill-bar {
   width: 100%;
   height: 14px;
@@ -184,61 +267,39 @@ section:hover {
   overflow: hidden;
 }
 
+/* animated fill */
 .skill-fill {
   height: 100%;
+  width: 0;
   background: linear-gradient(90deg, #38bdf8, #0284c7);
   border-radius: 10px;
-  text-align: right;
-  padding-right: 8px;
-  font-size: 11px;
-  color: white;
-  line-height: 14px;
-
-  animation: fillAnim 1.5s ease forwards;
+  position: relative;
+  transition: width 1.5s ease;
 }
 
-/* animation */
-@keyframes fillAnim {
-  from {
-    width: 0;
-  }
+/* ✨ shine animation */
+.skill-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-20deg);
+  animation: shine 2s infinite;
 }
 
-/* ================= BUTTON ================= */
-.button-outline {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 2px solid #0284c7;
-  color: #0284c7;
-  font-weight: 500;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.button-outline:hover {
-  background: #0284c7;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(2,132,199,0.3);
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 120%; }
 }
 
 /* ================= FOOTER ================= */
+
 footer {
   text-align: center;
   padding: 20px;
   background: rgba(219,234,254,0.6);
   margin-top: 30px;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 600px) {
-  .edu-flex {
-    flex-wrap: wrap;
-  }
-
-  section {
-    margin: 15px;
-  }
 }

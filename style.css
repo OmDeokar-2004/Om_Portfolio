@@ -1,13 +1,18 @@
 /* ============================= */
-/* GLOBAL */
+/* RESET + GLOBAL */
 /* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #dbeafe, #e0f2fe, #f0f9ff);
   color: #020617;
@@ -46,7 +51,7 @@ nav a.active {
   color: #0369a1;
 }
 
-/* UNDERLINE */
+/* underline animation */
 nav a::after {
   content: "";
   position: absolute;
@@ -64,7 +69,33 @@ nav a.active::after {
 }
 
 /* ============================= */
-/* SECTION (GLASS UI) */
+/* HERO (HOME PAGE FIX) */
+/* ============================= */
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  margin: 30px auto;
+  max-width: 900px;
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.profile-img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid #38bdf8;
+  margin-bottom: 15px;
+}
+
+/* ============================= */
+/* SECTION (GLASS UI FIXED) */
 /* ============================= */
 
 section {
@@ -74,22 +105,28 @@ section {
 
   background: linear-gradient(
     135deg,
-    rgba(255,255,255,0.65),
-    rgba(219,234,254,0.6)
+    rgba(255,255,255,0.75),
+    rgba(219,234,254,0.65)
   );
 
   backdrop-filter: blur(12px);
   border-radius: 16px;
+
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   border: 1px solid rgba(255,255,255,0.4);
+
+  transition: 0.3s;
 }
 
 section:hover {
   transform: translateY(-5px);
-  transition: 0.3s;
 }
 
-/* TEXT */
+section h2 {
+  margin-bottom: 15px;
+  color: #0369a1;
+}
+
 section p {
   font-size: 17px;
   line-height: 1.7;
@@ -112,13 +149,31 @@ section p {
 }
 
 /* ============================= */
+/* PROJECT / CARD */
+/* ============================= */
+
+.project {
+  background: rgba(255,255,255,0.85);
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(200,220,255,0.5);
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ============================= */
 /* ACHIEVEMENTS */
 /* ============================= */
 
 .achievement-card {
   background: linear-gradient(
     135deg,
-    rgba(255,255,255,0.85),
+    rgba(255,255,255,0.9),
     rgba(224,242,254,0.8)
   );
 
@@ -140,7 +195,7 @@ section p {
 }
 
 /* ============================= */
-/* 🔥 INTERNSHIP TIMELINE */
+/* 🔥 INTERNSHIP TIMELINE FIXED */
 /* ============================= */
 
 .timeline-section {
@@ -151,7 +206,7 @@ section p {
 .timeline {
   position: relative;
   margin-top: 30px;
-  padding-left: 25px;
+  padding-left: 30px;
 }
 
 /* vertical line */
@@ -177,9 +232,9 @@ section p {
 .timeline-dot {
   position: absolute;
   left: 2px;
-  top: 10px;
-  width: 16px;
-  height: 16px;
+  top: 12px;
+  width: 14px;
+  height: 14px;
   background: #38bdf8;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(56,189,248,0.6);
@@ -189,14 +244,15 @@ section p {
 .timeline-content {
   background: linear-gradient(
     135deg,
-    rgba(255,255,255,0.85),
-    rgba(224,242,254,0.7)
+    rgba(255,255,255,0.9),
+    rgba(224,242,254,0.75)
   );
 
   backdrop-filter: blur(10px);
   padding: 18px;
   border-radius: 12px;
   border: 1px solid rgba(200,220,255,0.5);
+
   transition: 0.3s;
 }
 
@@ -217,7 +273,7 @@ section p {
   font-weight: 500;
 }
 
-/* skills */
+/* skills tag */
 .tag {
   margin-top: 10px;
   font-size: 14px;
@@ -233,4 +289,25 @@ footer {
   text-align: center;
   padding: 20px;
   background: rgba(219,234,254,0.6);
+  margin-top: 30px;
+}
+
+/* ============================= */
+/* 🔥 RESPONSIVE FIX */
+/* ============================= */
+
+@media (max-width: 600px) {
+  .edu-flex {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  section {
+    padding: 25px 15px;
+  }
 }

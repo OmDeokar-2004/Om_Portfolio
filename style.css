@@ -343,3 +343,25 @@ footer {
     rgba(191,219,254,0.5)
   );
 }
+
+/* FORCE ALL EDUCATION IMAGES TO BE CONTROLLED */
+.timeline-content img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* SPPU LOGO (STRICT CONTROL) */
+.edu-logo-small {
+  width: 90px !important;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* PREVENT OVERFLOW FROM BIG IMAGES */
+.timeline-content {
+  overflow: hidden;
+}

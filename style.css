@@ -122,19 +122,11 @@ h1 {
   color: #0284c7;
 }
 
-/* typing cursor */
 .typing-text,
 .typing-sub {
-  border-right: 2px solid #0284c7;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%, 50%, 100% { border-color: #0284c7; }
-  25%, 75% { border-color: transparent; }
 }
 
 /* ================= SECTION ================= */

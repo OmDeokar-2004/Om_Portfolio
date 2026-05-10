@@ -127,6 +127,9 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
+
+  border-right: none !important;
+  animation: none !important;
 }
 
 /* ================= SECTION ================= */

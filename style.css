@@ -339,3 +339,100 @@ footer {
   );
 }
 
+/* ================= HERO DESCRIPTION ================= */
+
+.hero-desc{
+  max-width: 700px;
+  margin: 18px auto 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* ================= HYBRID SKILLS TAGS ================= */
+
+.skills-box{
+  margin-top: 20px;
+}
+
+.skills-box span{
+
+  display: inline-block;
+
+  background: linear-gradient(
+    135deg,
+    rgba(224,242,254,0.7),
+    rgba(186,230,253,0.5)
+  );
+
+  color: #0369a1;
+
+  padding: 10px 18px;
+  margin: 8px;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  border: 1px solid rgba(2,132,199,0.2);
+
+  transition: all 0.3s ease;
+}
+
+.skills-box span:hover{
+  transform: translateY(-3px);
+  background: #0284c7;
+  color: white;
+
+  box-shadow: 0 10px 20px rgba(2,132,199,0.25);
+}
+
+/* ================= SECTION TITLE IMPROVEMENT ================= */
+
+section h2{
+
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: #020617;
+}
+
+/* ================= BETTER PARAGRAPH READABILITY ================= */
+
+section p{
+
+  line-height: 1.8;
+  color: #1e293b;
+  font-size: 17px;
+}
+
+/* ================= CARD TITLE ================= */
+
+.project h3,
+.timeline-content h3{
+
+  color: #020617;
+  margin-bottom: 10px;
+}
+
+/* ================= SMOOTH PAGE ANIMATION ================= */
+
+section,
+.hero{
+
+  animation: fadeUp 0.7s ease;
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

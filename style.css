@@ -436,3 +436,96 @@ section,
   }
 }
 
+/* =========================
+   ACHIEVEMENTS GRID
+========================= */
+
+.achievement-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.achievement-card{
+    background:linear-gradient(135deg,#dbeeff,#cfe3f5);
+    padding:28px;
+    border-radius:22px;
+    border:1px solid #b7d6f3;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.achievement-card:hover{
+    transform:translateY(-5px);
+}
+
+.achievement-card h3{
+    color:#03122e;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.achievement-card p{
+    color:#374151;
+    line-height:1.8;
+    font-size:19px;
+}
+
+/* =========================
+   HIGHLIGHTS GRID
+========================= */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.stat-card{
+    background:linear-gradient(135deg,#dbeeff,#cfe3f5);
+    padding:35px 20px;
+    border-radius:22px;
+    text-align:center;
+    border:1px solid #b7d6f3;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px) scale(1.02);
+}
+
+.stat-card h3{
+    font-size:52px;
+    color:#0077c8;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    font-size:20px;
+    color:#374151;
+    font-weight:600;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .achievement-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .achievement-card h3{
+        font-size:24px;
+    }
+
+}
+

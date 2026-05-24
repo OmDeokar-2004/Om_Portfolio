@@ -653,3 +653,15 @@ section,
     }
 
 }
+
+/* INTERNSHIP LINKS */
+
+.internship-link{
+  text-decoration: none;
+  color: #0b132b;
+  transition: 0.3s;
+}
+
+.internship-link:hover{
+  color: #0077cc;
+}
